@@ -1,16 +1,11 @@
 
 def callBuildDiscarder(){
-  //echo "Discard Old Builds..."
-  //options {
-  //buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '2', daysToKeepStr: '', numToKeepStr: '2')
-
-
 def daysToKeep = ''
 def numToKeep = 2
 def artifactDaysToKeepStr = ''
 def artifactNumToKeepStr = 2
 
-Jenkins.instance.items.each { item ->
+Jenkins.instance.queue.items.each { item ->
   println("=====================")
   println("JOB: " + item.name)
   println("Job type: " + item.getClass())
