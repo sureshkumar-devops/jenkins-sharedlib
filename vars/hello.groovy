@@ -1,4 +1,4 @@
-def hello() 
+def hellokumar() 
 {
     echo "Hello, world!-Suresh"
 }
